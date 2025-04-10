@@ -7,7 +7,7 @@ credentials:
   usernames:
     adel:
       name: adel
-      password: "123aze"
+      password: "$2b$12$6DfKMKBS65bChqMOIk7soeoO.ue6auBIcqwp3rrW/w3dKIepVC6ea"
 cookie:
   expiry_days: 30
   key: 'secret_key'
