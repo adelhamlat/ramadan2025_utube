@@ -1,13 +1,20 @@
 import streamlit as st
 import pandas as pd
+import ast
+
+
 
 st.set_page_config(layout="wide")
 
 @st.cache_data
 def load_data(path):
-    return pd.read_csv(path)
+    data = pd.read_csv(path)
+    # Convertir en listes après chargement
+    data['categories'] = data['categories'].apply(lambda x: ast.literal_eval(x) if x else [])
+    data['keywords'] = data['keywords'].apply(lambda x: ast.literal_eval(x) if x else [])
+    return data
 
-data = load_data('annotations.csv')
+data = load_data('annotations_utube.csv')
 
 st.title("Dashboard d'analyse des annotations")
 
