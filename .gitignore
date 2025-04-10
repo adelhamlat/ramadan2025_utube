@@ -2,3 +2,13 @@ config.yaml
 __pycache__/
 *.pyc
 .DS_Store
+
+credentials:
+  usernames:
+    adel:
+      name: adel
+      password: "123aze"
+cookie:
+  expiry_days: 30
+  key: 'secret_key'
+  name: 'annotator_cookie'
